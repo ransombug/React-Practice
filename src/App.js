@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// Props Examples
+import Aprops from './Props/Aprops';
+import Props from './Props/Props'
+
+// UseState Example
+import Statecounter from './UseState/Statecounter';
+import Toggle from './UseState/Toggle';
+
+const App = () => {
+  return(
+    <div className="App"> 
+      {/* Props Examples */}
+          {/* <Props />
+          <Aprops /> */}
+
+        <Statecounter />
+        <Toggle />
+
     </div>
-  );
+  )
 }
 
 export default App;

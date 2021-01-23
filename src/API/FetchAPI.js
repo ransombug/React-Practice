@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import {Card, CardBody} from 'reactstrap';
+import {Card, CardBody,CardImg, CardTitle} from 'reactstrap';
+import '../App.css'
 
 const FetchAPI = () => {
 
     const [random, setRandom] = useState([]);
     
-    window.onload = () => {                                    // This Code invokes the function when the browser loads
-        randomUserGenerator();
-    }
+    // window.onload = () => {                                    // This Code invokes the function when the browser loads
+    //     randomUserGenerator();
+    // }
 
      const  randomUserGenerator = async () => {
          const url = 'https://randomuser.me/api/';
@@ -17,14 +18,16 @@ const FetchAPI = () => {
          const data = await response.json();                  // Convert the response we got into the JSON format in order to extract useful data.
          setRandom(data);
     }
-                                                              // console.log("Data = ", random);
+                                                              console.log("Data = ", random);
  
     return (
         <div>
             <hr></hr>
             <h1>Fetch API Example</h1>
-            {/* <button onClick={() => randomUserGenerator()}>Click here</button> */}
+            <button onClick={() => randomUserGenerator()}>Change User</button>
+
             <Card className="text-center mt-3 mb-4">
+                <CardImg src={random.results?.[0].picture.medium} alt="My Picture"></CardImg>
                 <CardBody>
                     Name :  <nobr> {random.results?.[0].name.first + " " + random.results?.[0].name.last} </nobr> <br></br>
                     Gender : <nobr> {random.results?.[0].gender} </nobr> <br></br>

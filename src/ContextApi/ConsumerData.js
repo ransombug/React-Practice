@@ -25,7 +25,7 @@ const AgentBond = () =>{
                         <p>Mission Name : {context.data.mname}</p>
                         <p>Agent Name : {context.data.agent}</p>
                         <p>Mission Status : {context.data.accept}</p>
-                        <button onClick={context.isMissionAccepted}>Click to Accept</button>
+                        <button onClick={context.isMissionAccepted}>Accept Mission</button>
                     </Fragment>
                 )
             }

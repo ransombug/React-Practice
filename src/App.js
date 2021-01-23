@@ -11,17 +11,24 @@ import Toggle from './UseState/Toggle';
 
 // React Context Example
 import ConsumerData from './ContextApi/ConsumerData';
+import FetchAPI from './API/FetchAPI';
 
 
 const App = () => {
   return(
     <div className="App"> 
+        {/* Prop Drilling Example */}
         <Props />
         <Aprops />
 
+        {/* UseState Example */}
         <Statecounter />
         <Toggle />
+
+        {/* Context API Example */}
         <ConsumerData />
+
+        <FetchAPI />
 
     </div>
   )

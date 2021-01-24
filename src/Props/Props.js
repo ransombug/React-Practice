@@ -1,5 +1,4 @@
 import React from 'react';
-import Aprops from './Aprops';
 
 const Props = ({name}) => {
     return (     

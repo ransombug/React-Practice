@@ -12,6 +12,7 @@ import Toggle from './UseState/Toggle';
 // React Context Example
 import ConsumerData from './ContextApi/ConsumerData';
 import FetchAPI from './API/FetchAPI';
+import FetchAPITwo from './API/FetchAPITwo';
 
 
 const App = () => {
@@ -28,7 +29,9 @@ const App = () => {
         {/* Context API Example */}
         <ConsumerData />
 
+        {/* API using fetch() method. */}
         <FetchAPI />
+        <FetchAPITwo />
 
     </div>
   )
